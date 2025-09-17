@@ -1,0 +1,59 @@
+body {
+  background: black;
+}
+
+
+.omnitrix {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+}
+
+/* ANEL VERDE */
+.anel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 8px solid #00ff00;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00ff00;
+  animation: girar 4s linear infinite;
+}
+
+/* CENTRO PULSANTE */
+.centro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background: #00ff00;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px #00ff00;
+  animation: pulsar 1.5s ease-in-out infinite;
+}
+
+/* SIMBOLO (AMPULHETA) */
+.simbolo {
+  width: 60px;
+  height: 60px;
+  background: black;
+  clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ANIMAÇÕES */
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulsar {
+  0%, 100% { box-shadow: 0 0 20px #00ff00; }
+  50% { box-shadow: 0 0 40px #00ff00; }
+}
